@@ -10,7 +10,7 @@ from sqlalchemy.engine import URL
 
 random.seed(42)
 
-DB_PASSWORD = "4256"
+DB_PASSWORD = "YOUR_PASSWORD"
 
 db_url = URL.create(
     drivername="postgresql+psycopg2",
