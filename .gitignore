@@ -1,4 +1,4 @@
-# Python
+# Python cache and compiled files
 __pycache__/
 *.py[cod]
 *.pyo
@@ -13,45 +13,29 @@ env/
 .env.*
 !.env.example
 
+# Streamlit secrets
+.streamlit/secrets.toml
+
 # Database files and backups
 *.dump
 *.backup
+*.db
+*.sqlite
+*.sqlite3
 *.sql.gz
 
-# IDE files
+# Generated reports and exports
+qa_validation_report.csv
+*.log
+
+# IDE and editor files
 .idea/
 .vscode/
 
-# OS files
+# Operating system files
 .DS_Store
 Thumbs.db
 
 # Temporary files
-*.log
-.streamlit/secrets.toml
-# Environment and secrets
-.env
-.env.*
-!.env.example
-
-# Python environments
-venv/
-.venv/
-__pycache__/
-*.pyc
-
-# IDE
-.idea/
-.vscode/
-
-# Database backups
-*.dump
-*.backup
-*.db
-
-# Sensitive data
-*.csv
-*.xlsx
-
-# Streamlit secrets
-.streamlit/secrets.toml
+*.tmp
+*.bak

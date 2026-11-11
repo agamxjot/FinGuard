@@ -38,6 +38,90 @@ Built using Python, PostgreSQL, SQL and Streamlit, the platform combines rule-ba
 ### Executive Risk Report
 ![Executive Risk Report](screenshots/07_executive_report.png)
 
+## Control Library & Documentation
+
+FinGuard includes a documented library of 12 financial risk and internal-control checks.
+
+| Documentation | Description |
+|---|---|
+| [Risk Control Library](docs/control_library.md) | Definitions, objectives and detection logic for all 12 controls |
+| [Control Reconciliation](docs/reconciliation.md) | Validation findings, data-quality observations and known discrepancies |
+
+## Validation Results
+
+The current validation results are based on the synthetic project dataset.
+
+| Validation Metric | Result |
+|---|---:|
+| Automated QA checks | 40/40 passed |
+| Control presence checks | 12/12 passed |
+| Seeded test cases detected | 240/240 |
+| Duplicate payment-control exception pairs | 0 |
+| Total recorded exception records | 3,674 |
+
+**Important:** Detection of all 240 seeded cases demonstrates coverage of the injected test scenarios. It does not establish production fraud-detection accuracy, precision or recall.
+
+The exception population includes 3,398 detections unmatched to injected test cases. These remain unreviewed and should not automatically be classified as false positives.
+
+## Exception Interpretation
+
+The 3,674 exception records have the following origins:
+
+| Exception Origin | Count |
+|---|---:|
+| Injected test cases | 240 |
+| Unmatched detections | 3,398 |
+| New control detections | 36 |
+| **Total** | **3,674** |
+
+The exception count represents payment-control records, not necessarily unique payments. A single payment may trigger multiple controls.
+
+CTRL03 and CTRL05 account for a substantial proportion of the recorded exceptions. Their high detection volumes are documented as synthetic-data calibration and contextual-risk considerations.
+
+See [Control Reconciliation](docs/reconciliation.md) for the detailed findings.
+
+## Known Limitations
+
+- The platform uses synthetic financial transaction data.
+- Invoice-level identifiers are unavailable, so duplicate-payment detections are potential matches rather than confirmed duplicate invoices.
+- Approval-limit breach results are influenced by synthetic payment amounts and configured employee approval limits.
+- Weekend payment activity requires business-calendar context before being treated as a policy exception.
+- Late-approval analysis uses payment date as a timing reference.
+- Investigation audit records currently use `SYSTEM` as the actor rather than authenticated user identities.
+- Unmatched detections require investigation before being classified as confirmed violations or false positives.
+
+## Project Structure
+
+```text
+FinGuard_Final/
+├── dashboard/
+├── data/
+├── docs/
+│   ├── control_library.md
+│   └── reconciliation.md
+├── reports/
+├── screenshots/
+├── scripts/
+├── sql/
+├── src/
+│   └── app.py
+├── control_tests.py
+├── qa_validation.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+## Running the Dashboard
+
+After configuring the PostgreSQL database and Python dependencies, launch the Streamlit application:
+
+```bash
+streamlit run src/app.py
+```
+
+Refer to the project documentation for control definitions, validation findings and known limitations.
+
 ## Technology Stack
 
 | Category | Technologies |

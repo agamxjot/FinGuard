@@ -1,0 +1,13 @@
+Control,Test,Detection Count,Result
+CTRL01,Duplicate payment evidence exists,20,PASS
+CTRL02,Vendor creator/approver conflict detections,157,PASS
+CTRL03,Approval threshold breach detections,1358,PASS
+CTRL04,Pairwise split payment detections,153,PASS
+CTRL05,Weekend payment detections,1282,PASS
+CTRL06,Round amount detections,40,PASS
+CTRL07,Vendor inactivity detections,529,PASS
+CTRL08,Missing approval detections,20,PASS
+CTRL09,Late approval detections,39,PASS
+CTRL10,Short-term vendor frequency detections,20,PASS
+CTRL11,Payment maker-checker detections,3,PASS
+CTRL12,Cumulative split payment detections,33,PASS
