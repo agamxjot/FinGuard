@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Database files and backups
+*.dump
+*.backup
+*.sql.gz
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+.streamlit/secrets.toml
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# Database backups
+*.dump
+*.backup
+*.db
+
+# Sensitive data
+*.csv
+*.xlsx
+
+# Streamlit secrets
+.streamlit/secrets.toml
