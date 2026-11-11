@@ -15,6 +15,29 @@ Built using Python, PostgreSQL, SQL and Streamlit, the platform combines rule-ba
 - **Executive Dashboard:** Interactive visualizations, exception analytics and risk reporting.
 - **Fraud Analytics:** PaySim transaction analysis using a dataset of 100,000 transactions.
 
+## Dashboard Preview
+
+### Executive Overview
+![Executive Overview](screenshots/01_executive_overview.png)
+
+### Vendor Risk Intelligence
+![Vendor Risk](screenshots/02_vendor_risk.png)
+
+### Employee Risk Intelligence
+![Employee Risk](screenshots/03_employee_risk.png)
+
+### Exception Investigation
+![Exception Investigation](screenshots/04_exception_investigation.png)
+
+### Audit Trail & Change History
+![Audit Trail](screenshots/05_audit_trail.png)
+
+### Control Performance & Exception Intelligence
+![Control Performance](screenshots/06_control_performance.png)
+
+### Executive Risk Report
+![Executive Risk Report](screenshots/07_executive_report.png)
+
 ## Technology Stack
 
 | Category | Technologies |
