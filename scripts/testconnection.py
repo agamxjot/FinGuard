@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine, text
 
 # Replace with your PostgreSQL password
-DB_PASSWORD = "4256"
+DB_PASSWORD = "PASSWORD"
 
 DATABASE_URL = (
     f"postgresql+psycopg2://postgres:{DB_PASSWORD}"
