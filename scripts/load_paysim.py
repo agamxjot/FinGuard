@@ -8,7 +8,7 @@ import os
 # 1. DATABASE CONFIGURATION
 # ==========================================
 
-DB_PASSWORD = "4256"
+DB_PASSWORD = "PASSWORD"
 
 db_url = URL.create(
     drivername="postgresql+psycopg2",
